@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
 
-    <title>Dashboard Template for Bootstrap</title>
+    <title>CJ Design</title>
 
     <!-- FontAwesome icons -->
     <script src="https://use.fontawesome.com/168e1f666f.js"></script>
@@ -67,28 +67,58 @@
             <h1>Hjem</h1>
         </main>
         <div style="margin-left: 20% !important; margin-right: 5%; width: 80%">
-            <div>
-            <h5>Logo:</h5>
+            <div style="height: 100px">
+            <h5>Logo</h5>
             <img src="../static/{{index .Bilde 0}}" />
                 <div style="float: right; width: 50%">
                     <p>Last opp nytt bilde:</p>
                     <form enctype="multipart/form-data" action="../upload" method="post">
                         <input type="file" name="uploadfile" />
-                        <input type="hidden" name="fil" value="Logo"/>
+                        <input type="hidden" name="fil" value="0"/>
                         <input type="submit" value="upload" />
                     </form>
                 </div>
             </div>
             <hr>
             <!------------------------------->
-            <h5>Karusell 1</h5>
-            <img height="150px" src="/static/{{index .Bilde 1}}" />
+            <div style="height: 200px">
+                <h5>Karusell 1</h5>
+                <img height="150px" src="../static/{{index .Bilde 1}}" />
+                <div style="float: right; width: 50%">
+                    <p>Last opp nytt bilde:</p>
+                    <form enctype="multipart/form-data" action="../upload" method="post">
+                        <input type="file" name="uploadfile" />
+                        <input type="hidden" name="fil" value="1"/>
+                        <input type="submit" value="upload" />
+                    </form>
+                </div>
+            </div>
             <hr>
-            <h5>Karusell 2</h5>
-            <img height="150px" src="../static/{{index .Bilde 2}}" />
+            <div style="height: 200px">
+                <h5>Karusell 2</h5>
+                <img height="150px" src="../static/{{index .Bilde 2}}" />
+                <div style="float: right; width: 50%">
+                    <p>Last opp nytt bilde:</p>
+                    <form enctype="multipart/form-data" action="../upload" method="post">
+                        <input type="file" name="uploadfile" />
+                        <input type="hidden" name="fil" value="2"/>
+                        <input type="submit" value="upload" />
+                    </form>
+                </div>
+            </div>
             <hr>
-            <h5>Karusell 3</h5>
-            <img height="150px" src="../static/{{index .Bilde 3}}" />
+            <div style="height: 200px">
+                <h5>Karusell 3</h5>
+                <img height="150px" src="../static/{{index .Bilde 3}}" />
+                <div style="float: right; width: 50%">
+                    <p>Last opp nytt bilde:</p>
+                    <form enctype="multipart/form-data" action="../upload" method="post">
+                        <input type="file" name="uploadfile" />
+                        <input type="hidden" name="fil" value="3"/>
+                        <input type="submit" value="upload" />
+                    </form>
+                </div>
+            </div>
             <hr>
             <!------------------------------->
             <div style="height: 400px">
@@ -102,18 +132,20 @@
                     <p>Last opp nytt bilde:</p>
                     <form enctype="multipart/form-data" action="../upload" method="post">
                         <input type="file" name="uploadfile" />
-                        <input type="hidden" name="fil" value="Logo"/>
+                        <input type="hidden" name="fil" value="4"/>
                         <input type="submit" value="upload" />
                     </form>
-                    <p>Last opp ny Header:</p>
+                    <br>
+                    <p>Last opp ny Header: </p>
                     <form action="/uploadheader" method="post">
                         Header:<input type="text" name="header">
                         <input type="hidden" name="key" value="0"/>
                         <input type="submit" value="upload">
                     </form>
-                    <p>Last opp ny Tekst:</p>
+                    <br>
+                    <p>Last opp ny Tekst: </p>
                     <form action="/uploadbody" method="post">
-                        Header:<input type="text" name="header">
+                        Tekst:<input type="text" name="body">
                         <input type="hidden" name="key" value="0"/>
                         <input type="submit" value="upload">
                     </form>

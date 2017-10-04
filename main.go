@@ -4,6 +4,7 @@ import (
 	"net/http"
 	"html/template"
 	"log"
+	"os"
 )
 
 func homeHandler(w http.ResponseWriter, r *http.Request){
@@ -113,5 +114,8 @@ func main() {
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 	http.Handle("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("css"))))
 
-	http.ListenAndServe(":8080", nil)
+	port := os.Getenv("PORT")
+
+	http.ListenAndServe(":"+port, nil)
+//	http.ListenAndServe(":8080", nil)
 }

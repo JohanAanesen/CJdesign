@@ -36,12 +36,24 @@ func uploadHandler(w http.ResponseWriter, r *http.Request) {
 		if place == "Logo" {
 			content.Logo = place
 		}else if */
+		key := r.FormValue("fil")
+		i, _ := strconv.Atoi(key)
 
+		updateBilde(i, handler.Filename)
 
 
 	}else{ //restricted access
 		http.Error(w, "Invalid User, try logging in again", http.StatusBadRequest)
 	}
+}
+
+func updateBilde(i int, name string){
+	content := readAPI()
+
+	content.Bilde[i] = name
+
+	contentJSON, _ := json.Marshal(content)
+	_ = ioutil.WriteFile("web/content.json", contentJSON, 0644)
 }
 
 func uploadHeaderHandler(w http.ResponseWriter, r *http.Request) {
