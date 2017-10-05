@@ -115,8 +115,8 @@ func main() {
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 	//	http.Handle("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("css"))))
 
-	//	port := os.Getenv("PORT")
+	port := os.Getenv("PORT")
 
-	//	http.ListenAndServe(":"+port, nil)
-	http.ListenAndServe(":8080", nil)
+		http.ListenAndServe(":"+port, nil)
+	//http.ListenAndServe(":8080", nil)
 }
