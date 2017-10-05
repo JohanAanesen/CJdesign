@@ -3,6 +3,7 @@ CJ design front-end &amp; back-end source code
 
 
 What heroku says when I try to deploy:
+```
 $ git push heroku master
 Counting objects: 52, done.
 Delta compression using up to 4 threads.
@@ -24,9 +25,9 @@ remote:
 To https://git.heroku.com/cjdesign.git
  ! [remote rejected] master -> master (pre-receive hook declined)
 error: failed to push some refs to 'https://git.heroku.com/cjdesign.git'
-
+```
 What heroku says when I try to deploy with a preset Buildpack (heroku/go):
-
+```
 $ git push heroku master
 Counting objects: 52, done.
 Delta compression using up to 4 threads.
@@ -47,3 +48,4 @@ remote:
 To https://git.heroku.com/cjdesign.git
  ! [remote rejected] master -> master (pre-receive hook declined)
 error: failed to push some refs to 'https://git.heroku.com/cjdesign.git'
+```
