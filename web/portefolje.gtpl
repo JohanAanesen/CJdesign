@@ -7,7 +7,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="Oppslagstavler">
     <meta name="author" content="CJ Design">
-    <link rel="icon" href="http://v4-alpha.getbootstrap.com/favicon.ico">
+    <link rel="icon" href="../static/favicon.ico">
 
     <!-- FontAwesome icons -->
     <script src="https://use.fontawesome.com/168e1f666f.js"></script>
