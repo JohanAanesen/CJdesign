@@ -54,7 +54,7 @@
 
     <div class="row featurette">
         <div class="col-md-7">
-            <h2 class="featurette-heading">{{index .Heading 5}}</h2>
+            <h2 class="featurette-heading">{{index .Heading 6}}</h2>
             <p class="lead">{{index .Body 6}}</p>
         </div>
         <div class="col-md-5">

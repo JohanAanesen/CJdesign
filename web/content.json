@@ -1,1 +1,32 @@
-{"bilde":["logo.png","header.jpg","header.jpg","header.jpg","insta1.jpg","insta2.jpg","insta3.jpg","insta1.jpg","insta2.jpg","insta3.jpg"],"heading":["Oppslagstavle","Header","Header","Header","Header","Header"],"body":["Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.","test","test","test","test","test", "kontakt info"]}
+{
+  "bilde": [
+    "logo.png",
+    "header.jpg",
+    "header.jpg",
+    "header.jpg",
+    "insta1.jpg",
+    "insta2.jpg",
+    "insta3.jpg",
+    "insta1.jpg",
+    "insta2.jpg",
+    "insta3.jpg"
+  ],
+  "heading": [
+    "Oppslagstavle",
+    "Oppslagstavlær",
+    "Sengegavler",
+    "Header",
+    "Header",
+    "Header",
+    "Kontakt"
+  ],
+  "body": [
+    "Lages til ditt bruk",
+    "Er et must have på kjøkkenet",
+    "Er også et must have på soverommet",
+    "test",
+    "test",
+    "test",
+    "kontakt info"
+  ]
+}

@@ -44,6 +44,8 @@ func uploadHandler(w http.ResponseWriter, r *http.Request) {
 	} else { //restricted access
 		http.Error(w, "Invalid User, try logging in again", http.StatusBadRequest)
 	}
+
+	http.Redirect(w, r, "/admin/hjem", 200)
 }
 
 func updateBilde(i int, name string) {
@@ -69,6 +71,7 @@ func uploadHeaderHandler(w http.ResponseWriter, r *http.Request) {
 
 	_ = ioutil.WriteFile("web/content.json", contentJSON, 0644)
 
+	http.Redirect(w, r, "/admin/hjem", 200)
 }
 
 func uploadBodyHandler(w http.ResponseWriter, r *http.Request) {
@@ -84,4 +87,5 @@ func uploadBodyHandler(w http.ResponseWriter, r *http.Request) {
 
 	_ = ioutil.WriteFile("web/content.json", contentJSON, 0644)
 
+	http.Redirect(w, r, "/admin/hjem", 200)
 }

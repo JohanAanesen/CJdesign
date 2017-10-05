@@ -79,7 +79,7 @@ func adminKontaktHandler(w http.ResponseWriter, r *http.Request){
 func executeAdmin(w http.ResponseWriter, r *http.Request, s string) {
 	//checks if there is a cookie
 	if checkCookie(w, r) {
-		t, err := template.ParseFiles("web/settings/" + s + ".html")
+		t, err := template.ParseFiles("web/settings/" + s + ".gtpl")
 		if err != nil {
 			print(err)
 		}

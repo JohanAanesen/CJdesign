@@ -152,31 +152,161 @@
                 </div>
             </div>
             <hr>
-            <h5>Header 2</h5>
-            <img height="150px" src="../static/{{index .Bilde 5}}" />
-            <p>{{index .Heading 1}}</p>
-            <p>{{index .Body 1}}</p>
+            <div style="height: 400px">
+                <div style="float:left;width: 40%;" height>
+                    <h5>Header 2</h5>
+                    <img height="150px" src="../static/{{index .Bilde 5}}" />
+                    <p>{{index .Heading 1}}</p>
+                    <p>{{index .Body 1}}</p>
+                </div>
+                <div style="float: right; width: 50%">
+                    <p>Last opp nytt bilde:</p>
+                    <form enctype="multipart/form-data" action="../upload" method="post">
+                        <input type="file" name="uploadfile" />
+                        <input type="hidden" name="fil" value="5"/>
+                        <input type="submit" value="upload" />
+                    </form>
+                    <br>
+                    <p>Last opp ny Header: </p>
+                    <form action="/uploadheader" method="post">
+                        Header:<input type="text" name="header">
+                        <input type="hidden" name="key" value="1"/>
+                        <input type="submit" value="upload">
+                    </form>
+                    <br>
+                    <p>Last opp ny Tekst: </p>
+                    <form action="/uploadbody" method="post">
+                        Tekst:<input type="text" name="body">
+                        <input type="hidden" name="key" value="1"/>
+                        <input type="submit" value="upload">
+                    </form>
+                </div>
+            </div>
             <hr>
-            <h5>Header 3</h5>
-            <img height="150px" src="../static/{{index .Bilde 6}}" />
-            <p>{{index .Heading 2}}</p>
-            <p>{{index .Body 2}}</p>
+            <div style="height: 400px">
+                <div style="float:left;width: 40%;" height>
+                    <h5>Header 3</h5>
+                    <img height="150px" src="../static/{{index .Bilde 6}}" />
+                    <p>{{index .Heading 2}}</p>
+                    <p>{{index .Body 2}}</p>
+                </div>
+                <div style="float: right; width: 50%">
+                    <p>Last opp nytt bilde:</p>
+                    <form enctype="multipart/form-data" action="../upload" method="post">
+                        <input type="file" name="uploadfile" />
+                        <input type="hidden" name="fil" value="6"/>
+                        <input type="submit" value="upload" />
+                    </form>
+                    <br>
+                    <p>Last opp ny Header: </p>
+                    <form action="/uploadheader" method="post">
+                        Header:<input type="text" name="header">
+                        <input type="hidden" name="key" value="2"/>
+                        <input type="submit" value="upload">
+                    </form>
+                    <br>
+                    <p>Last opp ny Tekst: </p>
+                    <form action="/uploadbody" method="post">
+                        Tekst:<input type="text" name="body">
+                        <input type="hidden" name="key" value="2"/>
+                        <input type="submit" value="upload">
+                    </form>
+                </div>
+            </div>
             <hr>
             <!------------------------------->
-            <h5>Feature 1</h5>
-            <img height="150px" src="../static/{{index .Bilde 7}}" />
-            <p>{{index .Heading 3}}</p>
-            <p>{{index .Body 3}}</p>
+            <div style="height: 400px">
+                <div style="float:left;width: 40%;" height>
+                    <h5>Feature 1</h5>
+                    <img height="150px" src="../static/{{index .Bilde 7}}" />
+                    <p>{{index .Heading 3}}</p>
+                    <p>{{index .Body 3}}</p>
+                </div>
+                <div style="float: right; width: 50%">
+                    <p>Last opp nytt bilde:</p>
+                    <form enctype="multipart/form-data" action="../upload" method="post">
+                        <input type="file" name="uploadfile" />
+                        <input type="hidden" name="fil" value="7"/>
+                        <input type="submit" value="upload" />
+                    </form>
+                    <br>
+                    <p>Last opp ny Header: </p>
+                    <form action="/uploadheader" method="post">
+                        Header:<input type="text" name="header">
+                        <input type="hidden" name="key" value="3"/>
+                        <input type="submit" value="upload">
+                    </form>
+                    <br>
+                    <p>Last opp ny Tekst: </p>
+                    <form action="/uploadbody" method="post">
+                        Tekst:<input type="text" name="body">
+                        <input type="hidden" name="key" value="3"/>
+                        <input type="submit" value="upload">
+                    </form>
+                </div>
+            </div>
             <hr>
-            <h5>Feature 2</h5>
-            <img height="150px" src="../static/{{index .Bilde 8}}" />
-            <p>{{index .Heading 4}}</p>
-            <p>{{index .Body 4}}</p>
+            <div style="height: 400px">
+                <div style="float:left;width: 40%;" height>
+                    <h5>Feature 2</h5>
+                    <img height="150px" src="../static/{{index .Bilde 8}}" />
+                    <p>{{index .Heading 4}}</p>
+                    <p>{{index .Body 4}}</p>
+                </div>
+                <div style="float: right; width: 50%">
+                    <p>Last opp nytt bilde:</p>
+                    <form enctype="multipart/form-data" action="../upload" method="post">
+                        <input type="file" name="uploadfile" />
+                        <input type="hidden" name="fil" value="8"/>
+                        <input type="submit" value="upload" />
+                    </form>
+                    <br>
+                    <p>Last opp ny Header: </p>
+                    <form action="/uploadheader" method="post">
+                        Header:<input type="text" name="header">
+                        <input type="hidden" name="key" value="4"/>
+                        <input type="submit" value="upload">
+                    </form>
+                    <br>
+                    <p>Last opp ny Tekst: </p>
+                    <form action="/uploadbody" method="post">
+                        Tekst:<input type="text" name="body">
+                        <input type="hidden" name="key" value="4"/>
+                        <input type="submit" value="upload">
+                    </form>
+                </div>
+            </div>
             <hr>
-            <h5>Feature 3</h5>
-            <img height="150px" src="../static/{{index .Bilde 9}}" />
-            <p>{{index .Heading 5}}</p>
-            <p>{{index .Body 5}}</p>
+            <div style="height: 400px">
+                <div style="float:left;width: 40%;" height>
+                    <h5>Feature 1</h5>
+                    <img height="150px" src="../static/{{index .Bilde 9}}" />
+                    <p>{{index .Heading 5}}</p>
+                    <p>{{index .Body 5}}</p>
+                </div>
+                <div style="float: right; width: 50%">
+                    <p>Last opp nytt bilde:</p>
+                    <form enctype="multipart/form-data" action="../upload" method="post">
+                        <input type="file" name="uploadfile" />
+                        <input type="hidden" name="fil" value="9"/>
+                        <input type="submit" value="upload" />
+                    </form>
+                    <br>
+                    <p>Last opp ny Header: </p>
+                    <form action="/uploadheader" method="post">
+                        Header:<input type="text" name="header">
+                        <input type="hidden" name="key" value="5"/>
+                        <input type="submit" value="upload">
+                    </form>
+                    <br>
+                    <p>Last opp ny Tekst: </p>
+                    <form action="/uploadbody" method="post">
+                        Tekst:<input type="text" name="body">
+                        <input type="hidden" name="key" value="5"/>
+                        <input type="submit" value="upload">
+                    </form>
+                </div>
+            </div>
             <hr>
 
         </div>
