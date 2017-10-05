@@ -94,19 +94,19 @@ func fillContentHardCode(content Content)(Content){
 }
 
 func apiHandler(w http.ResponseWriter, r *http.Request){
-	var content Content
-	content = fillContentHardCode(content)
+	/*	var content Content
+		content = fillContentHardCode(content)
 
-	json.NewEncoder(w).Encode(content)
-/*	json1, err := os.Open("web/content.json")
-	if err != nil {
-		fmt.Printf("Error reading content.json: %s", err)
-		os.Exit(1)
-	}
+		json.NewEncoder(w).Encode(content)*/
+		json1, err := os.Open("web/content.json")
+		if err != nil {
+			fmt.Printf("Error reading content.json: %s", err)
+			os.Exit(1)
+		}
 
-	content, _ := decodeAPI(json1)
+		content, _ := decodeAPI(json1)
 
-	json.NewEncoder(w).Encode(content)*/
+		json.NewEncoder(w).Encode(content)
 	//json.Encoder(w).Encode(json1)
 }
 
