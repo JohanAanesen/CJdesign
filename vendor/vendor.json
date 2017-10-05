@@ -2,7 +2,7 @@
   "comment": "",
   "ignore": "test",
   "package": [],
-  "rootPath": "caro_test",
+  "rootPath": "caro",
   "heroku":{
     "install": ["./..."],
     "goVersion": "go1.9"
