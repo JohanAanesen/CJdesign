@@ -1,12 +1,12 @@
 package main
 
 import (
-	"net/http"
+	"encoding/json"
 	"fmt"
-	"os"
 	"io"
 	"io/ioutil"
-	"encoding/json"
+	"net/http"
+	"os"
 	"strconv"
 )
 
@@ -28,26 +28,25 @@ func uploadHandler(w http.ResponseWriter, r *http.Request) {
 		defer f.Close()
 		io.Copy(f, file)
 
-/*
-		content := readAPI()
+		/*
+			content := readAPI()
 
-		place := r.FormValue("fil")
+			place := r.FormValue("fil")
 
-		if place == "Logo" {
-			content.Logo = place
-		}else if */
+			if place == "Logo" {
+				content.Logo = place
+			}else if */
 		key := r.FormValue("fil")
 		i, _ := strconv.Atoi(key)
 
 		updateBilde(i, handler.Filename)
 
-
-	}else{ //restricted access
+	} else { //restricted access
 		http.Error(w, "Invalid User, try logging in again", http.StatusBadRequest)
 	}
 }
 
-func updateBilde(i int, name string){
+func updateBilde(i int, name string) {
 	content := readAPI()
 
 	content.Bilde[i] = name
@@ -65,7 +64,7 @@ func uploadHeaderHandler(w http.ResponseWriter, r *http.Request) {
 	i, _ := strconv.Atoi(key)
 
 	content.Heading[i] = header
-//	content.Heading1 = header
+	//	content.Heading1 = header
 	contentJSON, _ := json.Marshal(content)
 
 	_ = ioutil.WriteFile("web/content.json", contentJSON, 0644)
