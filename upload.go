@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"os"
 	"strconv"
+	"html/template"
 )
 
 func uploadHandler(w http.ResponseWriter, r *http.Request) {
@@ -82,7 +83,9 @@ func uploadBodyHandler(w http.ResponseWriter, r *http.Request) {
 
 	i, _ := strconv.Atoi(key)
 
-	content.Body[i] = body
+
+
+	content.Body[i] = template.HTML(body)
 	contentJSON, _ := json.Marshal(content)
 
 	_ = ioutil.WriteFile("web/content.json", contentJSON, 0644)
