@@ -112,7 +112,7 @@ func main() {
 	http.HandleFunc("/uploadbody", uploadBodyHandler)
 
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
-	http.Handle("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("css"))))
+//	http.Handle("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("css"))))
 
 //	port := os.Getenv("PORT")
 
