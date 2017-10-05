@@ -55,11 +55,7 @@
     <div class="row featurette">
         <div class="col-md-7">
             <h2 class="featurette-heading">{{index .Heading 6}}</h2>
-            <p class="lead">
-            <script type="text/javascript">
-                 alert("{{index .Body 6}}")
-                 </script>
-            </p>
+            <p class="lead">{{index .Body 6}}</p>
         </div>
         <div class="col-md-5">
             <img class="featurette-image img-fluid center-block" data-src="holder.js/500x500/auto" alt="500x500" src="/static/{{index .Bilde 10}}" data-holder-rendered="true">

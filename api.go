@@ -6,6 +6,7 @@ import (
 	"io"
 	"net/http"
 	"os"
+	"html/template"
 )
 
 /*
@@ -48,7 +49,8 @@ type Content struct {
 
 	Heading []string `json:"heading"`
 
-	Body []string `json:"body"`
+	//Body []string `json:"body"`
+	Body []template.HTML `json:"body"`
 }
 
 /*
