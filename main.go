@@ -69,11 +69,10 @@ func adminHjemHandler(w http.ResponseWriter, r *http.Request) {
 	executeAdmin(w, r, "adminHjem")
 }
 
-/*
 func adminPortefoljeHandler(w http.ResponseWriter, r *http.Request){
 	executeAdmin(w, r, "adminPortefolje")
 }
-*/
+
 func adminKontaktHandler(w http.ResponseWriter, r *http.Request){
 	executeAdmin(w, r, "adminKontakt")
 }
@@ -110,6 +109,7 @@ func main() {
 	http.HandleFunc("/admin", adminHandler)
 	http.HandleFunc("/admin/hjem", adminHjemHandler)
 	http.HandleFunc("/admin/kontakt", adminKontaktHandler)
+	http.HandleFunc("/admin/portefolje", adminPortefoljeHandler)
 	http.HandleFunc("/logout", logoutHandler)
 	http.HandleFunc("/upload", uploadHandler)
 	http.HandleFunc("/uploadheader", uploadHeaderHandler)

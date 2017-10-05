@@ -55,7 +55,7 @@
                     <a class="nav-link" href="admin/hjem">Hjem</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Portefølje</a>
+                    <a class="nav-link" href="admin/portefolje">Portefølje</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="admin/kontakt">Kontakt</a>
