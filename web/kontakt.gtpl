@@ -58,7 +58,7 @@
             <p class="lead">{{index .Body 6}}</p>
         </div>
         <div class="col-md-5">
-            <img class="featurette-image img-fluid center-block" data-src="holder.js/500x500/auto" alt="500x500" src="/static/{{index .Bilde 4}}" data-holder-rendered="true">
+            <img class="featurette-image img-fluid center-block" data-src="holder.js/500x500/auto" alt="500x500" src="/static/{{index .Bilde 9}}" data-holder-rendered="true">
         </div>
     </div>
 

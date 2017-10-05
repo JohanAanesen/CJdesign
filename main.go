@@ -73,9 +73,10 @@ func adminHjemHandler(w http.ResponseWriter, r *http.Request) {
 func adminPortefoljeHandler(w http.ResponseWriter, r *http.Request){
 	executeAdmin(w, r, "adminPortefolje")
 }
+*/
 func adminKontaktHandler(w http.ResponseWriter, r *http.Request){
 	executeAdmin(w, r, "adminKontakt")
-}*/
+}
 
 func executeAdmin(w http.ResponseWriter, r *http.Request, s string) {
 	//checks if there is a cookie
@@ -108,6 +109,7 @@ func main() {
 	http.HandleFunc("/kontakt", kontaktHandler)
 	http.HandleFunc("/admin", adminHandler)
 	http.HandleFunc("/admin/hjem", adminHjemHandler)
+	http.HandleFunc("/admin/kontakt", adminKontaktHandler)
 	http.HandleFunc("/logout", logoutHandler)
 	http.HandleFunc("/upload", uploadHandler)
 	http.HandleFunc("/uploadheader", uploadHeaderHandler)
@@ -118,6 +120,6 @@ func main() {
 
 	port := os.Getenv("PORT")
 
-		http.ListenAndServe(":"+port, nil)
+	http.ListenAndServe(":"+port, nil)
 	//http.ListenAndServe(":8080", nil)
 }

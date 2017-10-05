@@ -58,7 +58,7 @@
                     <a class="nav-link" href="#">Portefølje</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Kontakt</a>
+                    <a class="nav-link" href="admin/kontakt">Kontakt</a>
                 </li>
             </ul>
         </nav>

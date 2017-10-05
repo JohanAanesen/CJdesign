@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../static/favicon.ico">
 
-    <title>Dashboard Template for Bootstrap</title>
+    <title>CJ Design</title>
 
     <!-- FontAwesome icons -->
     <script src="https://use.fontawesome.com/168e1f666f.js"></script>
@@ -49,26 +49,58 @@
         <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
             <ul class="nav nav-pills flex-column">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Overview <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/admin">Overview</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="admin/hjem">Hjem</a>
+                    <a class="nav-link" href="admin/kontakt">Hjem</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Portefølje</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="admin/kontakt">Kontakt</a>
+                    <a class="nav-link active" href="#">Kontakt<span class="sr-only">(current)</span></a>
                 </li>
             </ul>
         </nav>
 
         <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
-            <h1>Overview</h1>
+            <h1>Hjem</h1>
         </main>
-        <div style="margin-left: 20% !important; margin-right: 5%; width: 100%">
-            <iframe src="../../" name="targetframe" allowTransparency="true" scrolling="yes" marginwidth="2" width="100%" height="1920px" frameborder="1" >
-            </iframe>
+        <div style="margin-left: 20% !important; margin-right: 5%; width: 80%">
+
+            <!------------------------------->
+            <div style="height: 400px">
+                <div style="float:left;width: 40%;" height>
+                    <h5>Bilde</h5>
+                    <img height="150px" src="../static/{{index .Bilde 10}}" />
+                    <p>{{index .Heading 6}}</p>
+                    <p>{{index .Body 6}}</p>
+                </div>
+                <div style="float: right; width: 50%">
+                    <p>Last opp nytt bilde:</p>
+                    <form enctype="multipart/form-data" action="../upload" method="post">
+                        <input type="file" name="uploadfile" />
+                        <input type="hidden" name="fil" value="10"/>
+                        <input type="submit" value="upload" />
+                    </form>
+                    <br>
+                    <p>Last opp ny Header: </p>
+                    <form action="/uploadheader" method="post">
+                        Header:<input type="text" name="header">
+                        <input type="hidden" name="key" value="6"/>
+                        <input type="submit" value="upload">
+                    </form>
+                    <br>
+                    <p>Last opp ny Tekst: </p>
+                    <form action="/uploadbody" method="post">
+                        Tekst:<input type="text" name="body">
+                        <input type="hidden" name="key" value="6"/>
+                        <input type="submit" value="upload">
+                    </form>
+                </div>
+            </div>
+            <hr>
+
         </div>
     </div>
 </div>
