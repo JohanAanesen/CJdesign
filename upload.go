@@ -66,7 +66,7 @@ func uploadHeaderHandler(w http.ResponseWriter, r *http.Request) {
 
 	i, _ := strconv.Atoi(key)
 
-	content.Heading[i] = header
+	content.Heading[i] = template.HTML(header)
 	//	content.Heading1 = header
 	contentJSON, _ := json.Marshal(content)
 
@@ -82,8 +82,6 @@ func uploadBodyHandler(w http.ResponseWriter, r *http.Request) {
 	content := readAPI()
 
 	i, _ := strconv.Atoi(key)
-
-
 
 	content.Body[i] = template.HTML(body)
 	contentJSON, _ := json.Marshal(content)

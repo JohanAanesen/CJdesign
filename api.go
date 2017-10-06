@@ -47,7 +47,7 @@ type Content struct {
 	//	Logo		string 	`json:"logo"`
 	Bilde []string `json:"bilde"`
 
-	Heading []string `json:"heading"`
+	Heading []template.HTML `json:"heading"`
 
 	//Body []string `json:"body"`
 	Body []template.HTML `json:"body"`

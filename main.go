@@ -8,7 +8,7 @@ import (
 )
 
 func homeHandler(w http.ResponseWriter, r *http.Request) {
-	temp, err := template.ParseFiles("web/index.gtpl")
+	temp, err := template.ParseFiles("web/index.html")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -27,13 +27,13 @@ func adminHandler(w http.ResponseWriter, r *http.Request) {
 	pw := r.FormValue("password")
 
 	if checkCookie(w, r) {
-		t, _ := template.ParseFiles("web/admin.gtpl")
+		t, _ := template.ParseFiles("web/admin.html")
 		t.Execute(w, nil)
 	} else if name == "johan" && pw == "123" {
 		//set cookie
 		setCookie(w, name)
 
-		t, _ := template.ParseFiles("web/admin.gtpl")
+		t, _ := template.ParseFiles("web/admin.html")
 		t.Execute(w, nil)
 	} else {
 		http.Error(w, "Invalid User, try logging in again", http.StatusBadRequest)
@@ -44,18 +44,18 @@ func loginHandler(w http.ResponseWriter, r *http.Request) {
 	if checkCookie(w, r) {
 		http.Redirect(w, r, "/admin", 200)
 	} else {
-		t, _ := template.ParseFiles("web/login.gtpl")
+		t, _ := template.ParseFiles("web/login.html")
 		t.Execute(w, nil)
 	}
 }
 
 func portefoljeHandler(w http.ResponseWriter, r *http.Request) {
-	t, _ := template.ParseFiles("web/portefolje.gtpl")
+	t, _ := template.ParseFiles("web/portefolje.html")
 	t.Execute(w, nil)
 }
 
 func kontaktHandler(w http.ResponseWriter, r *http.Request) {
-	t, _ := template.ParseFiles("web/kontakt.gtpl")
+	t, _ := template.ParseFiles("web/kontakt.html")
 	var content Content
 
 	//content = fillContent(content)
@@ -80,7 +80,7 @@ func adminKontaktHandler(w http.ResponseWriter, r *http.Request){
 func executeAdmin(w http.ResponseWriter, r *http.Request, s string) {
 	//checks if there is a cookie
 	if checkCookie(w, r) {
-		t, err := template.ParseFiles("web/settings/" + s + ".gtpl")
+		t, err := template.ParseFiles("web/settings/" + s + ".html")
 		if err != nil {
 			print(err)
 		}
@@ -119,7 +119,6 @@ func main() {
 	//	http.Handle("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("css"))))
 
 	port := os.Getenv("PORT")
-
 	http.ListenAndServe(":"+port, nil)
 	//http.ListenAndServe(":8080", nil)
 }

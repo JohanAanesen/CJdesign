@@ -18,6 +18,12 @@
 
     <!-- Custom styles for this template -->
     <link href="http://v4-alpha.getbootstrap.com/examples/dashboard/dashboard.css" rel="stylesheet">
+
+  <script>
+      $('.custom-file-input').on('change',function(){
+      $(this).next('.form-control-file').addClass("selected").html($(this).val());
+      })
+  </script>
 </head>
 
 <body>
@@ -79,23 +85,24 @@
                 <div style="float: right; width: 50%">
                     <p>Last opp nytt bilde:</p>
                     <form enctype="multipart/form-data" action="../upload" method="post">
-                        <input type="file" name="uploadfile" />
+                        <input type="file" name="uploadfile" accept="image/x-png,image/gif,image/jpeg" />
                         <input type="hidden" name="fil" value="10"/>
-                        <input type="submit" value="upload" />
+                        <input class="btn btn-primary" type="submit" value="upload" />
                     </form>
                     <br>
                     <p>Last opp ny Header: </p>
                     <form action="/uploadheader" method="post">
-                        Header:<input type="text" name="header">
+                        <input class="form-control" type="text" name="header">
                         <input type="hidden" name="key" value="6"/>
-                        <input type="submit" value="upload">
+                        <input class="btn btn-primary" type="submit" value="upload">
                     </form>
                     <br>
                     <p>Last opp ny Tekst: </p>
                     <form action="/uploadbody" method="post">
-                        Tekst:<input type="text" name="body">
+                       <!-- Tekst:<input class="form-control" type="text" name="body"> -->
+                        <textarea class="form-control" id="exampleTextarea" rows="3" name="body"></textarea>
                         <input type="hidden" name="key" value="6"/>
-                        <input type="submit" value="upload">
+                        <input class="btn btn-primary" type="submit" value="upload">
                     </form>
                 </div>
             </div>
