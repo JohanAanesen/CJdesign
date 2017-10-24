@@ -5,6 +5,8 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"gopkg.in/mgo.v2"
+	"fmt"
 )
 
 func homeHandler(w http.ResponseWriter, r *http.Request) {
@@ -100,7 +102,27 @@ func logoutHandler(w http.ResponseWriter, r *http.Request) {
 	http.Redirect(w, r, "/", 200)
 }
 
+func test(){
+	sess, err := mgo.Dial("mongodb://johan:123@ds121945.mlab.com:21945/heroku_kfvxszdn")
+	if err != nil{
+		fmt.Printf("Shitters clogged %s", err)
+		return
+	}
+
+	defer sess.Close()
+
+	sess.SetMode(mgo.Monotonic, true)
+
+
+	collection := sess.DB("heroku_kfvxszdn").C("test")
+
+	var test Content
+	test = collection
+}
+
 func main() {
+
+	test()
 	http.HandleFunc("/", homeHandler)
 	http.HandleFunc("/api", apiHandler)
 	http.HandleFunc("/login", loginHandler)
