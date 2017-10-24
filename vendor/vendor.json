@@ -1,10 +1,12 @@
 {
-  "comment": "",
-  "ignore": "test",
-  "package": [],
-  "rootPath": "caro",
-  "heroku":{
-    "install": ["./..."],
-    "goVersion": "go1.9"
-  }
+	"comment": "",
+	"heroku": {
+		"goVersion": "go1.9",
+		"install": [
+			"./..."
+		]
+	},
+	"ignore": "test",
+	"package": [],
+	"rootPath": "CJdesign"
 }
