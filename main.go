@@ -5,8 +5,6 @@ import (
 	"log"
 	"net/http"
 	"os"
-	"gopkg.in/mgo.v2"
-	"fmt"
 )
 
 func homeHandler(w http.ResponseWriter, r *http.Request) {
