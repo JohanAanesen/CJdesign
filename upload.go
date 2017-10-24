@@ -56,6 +56,9 @@ func updateBilde(i int, name string) {
 
 	contentJSON, _ := json.Marshal(content)
 	_ = ioutil.WriteFile("web/content.json", contentJSON, 0644)
+
+	updateDB(content)
+
 }
 
 func uploadHeaderHandler(w http.ResponseWriter, r *http.Request) {
@@ -72,6 +75,8 @@ func uploadHeaderHandler(w http.ResponseWriter, r *http.Request) {
 
 	_ = ioutil.WriteFile("web/content.json", contentJSON, 0644)
 
+	updateDB(content)
+
 	http.Redirect(w, r, "/admin/hjem", 200)
 }
 
@@ -87,6 +92,8 @@ func uploadBodyHandler(w http.ResponseWriter, r *http.Request) {
 	contentJSON, _ := json.Marshal(content)
 
 	_ = ioutil.WriteFile("web/content.json", contentJSON, 0644)
+
+	updateDB(content)
 
 	http.Redirect(w, r, "/admin/hjem", 200)
 }
