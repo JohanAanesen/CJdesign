@@ -51,7 +51,11 @@ func loginHandler(w http.ResponseWriter, r *http.Request) {
 
 func portefoljeHandler(w http.ResponseWriter, r *http.Request) {
 	t, _ := template.ParseFiles("web/portefolje.html")
-	t.Execute(w, nil)
+	var content Content
+	content = readAPI()
+	t.Execute(w, content)
+
+//	t.Execute(w, nil)
 }
 
 func kontaktHandler(w http.ResponseWriter, r *http.Request) {
