@@ -104,6 +104,17 @@ func logoutHandler(w http.ResponseWriter, r *http.Request) {
 	http.Redirect(w, r, "/", 200)
 }
 
+func sengHandler(w http.ResponseWriter, r *http.Request){
+	t, _ := template.ParseFiles("web/sengegavl.html")
+	var content Content
+
+	//content = fillContent(content)
+	content = readAPI()
+
+	t.Execute(w, content)
+	//	t.Execute(w, nil)
+}
+
 func main() {
 
 	http.HandleFunc("/", homeHandler)
@@ -119,6 +130,7 @@ func main() {
 	http.HandleFunc("/upload", uploadHandler)
 	http.HandleFunc("/uploadheader", uploadHeaderHandler)
 	http.HandleFunc("/uploadbody", uploadBodyHandler)
+	http.HandleFunc("/sengegavl", sengHandler)
 
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 	//	http.Handle("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("css"))))
